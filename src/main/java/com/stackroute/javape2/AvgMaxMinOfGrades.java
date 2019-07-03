@@ -1,22 +1,22 @@
 package com.stackroute.javape2;
 
 public class AvgMaxMinOfGrades {
-    public String avgMaxMinOfGrades(int n,int[]grades)
+    public String avgMaxMinOfGrades(int no_of_students,int[]grades)
     {
         String output;
         int min=0,max=0;
         double avg=0.0,sum=0.0;
-        for(int i=0;i<grades.length;i++) {
-            if (grades[i] > 0 && grades[i] < 100) {
-                for (i = 0; i < grades.length - 1; i++) {
+        for(int index=0;index<grades.length;index++) {
+            if (grades[index] > 0 && grades[index] < 100) {
+                for (index = 0; index < grades.length - 1; index++) {
 
-                    if (grades[i] < grades[i + 1]) {
-                        min = grades[i];
+                    if (grades[index] < grades[index + 1]) {
+                        min = grades[index];//assigning minimum
                     } else {
-                        max = grades[i + 1];
+                        max = grades[index + 1];//assigning maximum
                     }
 
-                    sum = sum + grades[i];
+                    sum = sum + grades[index];//calculating sum
 
 
                 }
@@ -24,7 +24,7 @@ public class AvgMaxMinOfGrades {
                 output = "Value is out of range";
         }
 
-            avg=sum/n;
+            avg=sum/no_of_students;//calculating the average
           output="Average is:" + avg + "Maximum is:" + max + "Minimum is:" + min;
 
               return output;

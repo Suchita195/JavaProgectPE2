@@ -11,7 +11,7 @@ public class FrequencyOfWords {
 
     public Map countWords() {
 // Declare the HashMap
-        Map< String,Integer> hashMap = new HashMap< String,Integer>();
+        Map< String,Integer> hashMap = new HashMap< String,Integer>();//using hashmap
         try {
             String line;
             FileReader reader = new FileReader("/home/suchita/javaprojectpe2/src/main/java/com/stackroute/javape2/FileDemo.txt");
@@ -20,7 +20,7 @@ public class FrequencyOfWords {
             while ((line = br.readLine()) != null) {
                 line = line.toLowerCase();
                String[] words = line.split("\\s+|,|\\.|;");
-               for(String word : words)
+               for(String word : words)//for each string word in the array words
                {
                    if(hashMap.containsKey(word)) {
                        Integer count = hashMap.get(word);
@@ -28,7 +28,7 @@ public class FrequencyOfWords {
                    }
                    else
                    {
-                       hashMap.put(word,1);
+                       hashMap.put(word,1);//put the word in the map
                    }
                }
                line=br.readLine();

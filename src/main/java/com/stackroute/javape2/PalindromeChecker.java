@@ -3,11 +3,11 @@ import java.util.*;
 
 public class PalindromeChecker {
     public static String palindromeChecker(String original) {
-        String reverse = ""; // Objects of String class
+        String reverse = "";
         int length = original.length();
-        for (int i = length - 1; i >= 0; i--)
-            reverse = reverse + original.charAt(i);
-        if (original.equals(reverse))
+        for (int index = length - 1; index >= 0; index--)
+            reverse = reverse + original.charAt(index);
+        if (original.equals(reverse))//checking if original is equal to reverse
             return "Entered string/number is a palindrome.";
         else
             return "Entered string/number isn't a palindrome.";

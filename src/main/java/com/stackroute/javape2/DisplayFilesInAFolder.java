@@ -12,17 +12,18 @@ public class DisplayFilesInAFolder {
         File file = new File("/home/suchita/javaprojectpe2/src/main/java/com/stackroute/javape2");
 
         File[] listOfFiles = file.listFiles();
+        // loop to list all the files in the folder
 
-        for (int i = 0; i < listOfFiles.length; i++) {
-            if (listOfFiles[i].isFile()) {
-                System.out.println("File " + listOfFiles[i].getName());
-            } else if (listOfFiles[i].isDirectory()) {
-                System.out.println("Directory " + listOfFiles[i].getName());
+        for (int index = 0; index < listOfFiles.length; index++) {
+            if (listOfFiles[index].isFile()) {
+                System.out.println("File " + listOfFiles[index].getName());
+            } else if (listOfFiles[index].isDirectory()) {
+                System.out.println("Directory " + listOfFiles[index].getName());
             }
 
         }
-        Path path = Paths.get("/home/suchita/javaprojectpe2/src/main/java/com/stackroute/javape2/file.txt");
+        Path path = Paths.get("/home/suchita/javaprojectpe2/src/main/java/com/stackroute/javape2/file.txt");//read contents of file with this extention
         byte[] data = readAllBytes(path);
-        return output.trim() + "\n" + new String(data).trim();
+        return output.trim() + "\n" + new String(data).trim();//return the content of the file
     }
 }

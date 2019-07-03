@@ -13,14 +13,12 @@ public class FrequencyOfWordsTest {
     FrequencyOfWords check;
     @Before
     public void setUp(){
-        System.out.println("Before run");
         check=new FrequencyOfWords();
     }
 
     @After
     public void tearDown()
     {
-        System.out.println("After tear");
         check=null;
     }
 

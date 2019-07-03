@@ -9,14 +9,12 @@ public class FileToUpperCaseTest {
     FileToUpperCase check;
     @Before
     public void setUp(){
-        System.out.println("Before run");
         check=new FileToUpperCase();
     }
 
     @After
     public void tearDown()
     {
-        System.out.println("After tear");
         check=null;
     }
 

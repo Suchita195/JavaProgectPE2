@@ -9,24 +9,20 @@ public class Powerof4CheckerTest {
     Powerof4Checker check;
     @Before
     public void setUp(){
-        System.out.println("Before");
         check=new Powerof4Checker();
     }
     @After
     public void tearDown()
     {
-        System.out.println("After");
         check=null;
     }
     @BeforeClass
     public static void setUpBeforeClass(){
-        System.out.println("Before");
 
     }
     @AfterClass
     public static void tearDownAfterClass()
     {
-        System.out.println("After");
 
     }
     @Test

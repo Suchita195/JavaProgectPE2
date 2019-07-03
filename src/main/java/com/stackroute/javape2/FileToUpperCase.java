@@ -7,7 +7,7 @@ public class FileToUpperCase {
     {
         File file = new File("/home/suchita/javaprojectpe2/src/main/java/com/stackroute/javape2/file.txt");
 
-        BufferedReader br = new BufferedReader(new FileReader(file));
+        BufferedReader br = new BufferedReader(new FileReader(file));//read the file
 
         String st;
         String str="";
@@ -15,8 +15,8 @@ public class FileToUpperCase {
 //            System.out.println(st);
             str=str+st;
         }
-        String str1=str.toUpperCase();
-        int len=str.length();
+        String str1=str.toUpperCase();//convert the content to upper case
+        int len=str.length();//calculate length of the file
         String numberAsString = Integer.toString(len);
         return "\n" + str1 + "\n" + numberAsString;
     }
